@@ -1,6 +1,8 @@
 const isGithub = window.location.origin.includes('github.io');
 const repositoryName = window.location.pathname.split('/').filter(Boolean)[0];
 
+// updateURLs();
+
 window.addEventListener('DOMContentLoaded', () => {
   console.log(isGithub);
   console.log(repositoryName);
@@ -23,7 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
       if (currentPage === "photography") {
         if(isGithub){
           photographyPhotos.forEach(element => {
-            element += window.location.origin + '/' + repositoryName;
+            element += '/' + repositoryName;
           });
         }
         setupDynamicGallery(photographyPhotos);
