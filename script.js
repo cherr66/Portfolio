@@ -47,7 +47,7 @@ function updateURLs(){
   if (isGithub) {
     const basePath = window.location.origin + '/' + repositoryName;
 
-    document.querySelectorAll('img, link[rel="stylesheet"]').forEach(el => {
+    document.querySelectorAll('img, link[rel="stylesheet"], a').forEach(el => {
       let url = el.src || el.href;
       
       const pattern = new RegExp(`^${window.location.origin}/(?!${repositoryName}/)`);
@@ -66,7 +66,7 @@ function updateURLs(){
 
     document.querySelectorAll('style').forEach(styleEl => {
         styleEl.textContent = styleEl.textContent.replace(/url\(["']?\/(.*?)["']?\)/g, (match, path) => {
-            return `url(${basePath}/${path})`;
+            return `url(${repositoryName}/${path})`;
         });
     });
   }
