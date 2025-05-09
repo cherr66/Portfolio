@@ -24,9 +24,10 @@ window.addEventListener('DOMContentLoaded', () => {
       const currentPage = pathParts[pathParts.length - 1].toLowerCase();
       if (currentPage === "photography") {
         if(isGithub){
-          photographyPhotos.forEach(element => {
-            element += '/' + repositoryName;
+          photographyPhotos.forEach((element, index, array) => {
+            array[index] = element.replace('/Images', `/${repositoryName}/Images`);
           });
+          console.log(photographyPhotos);
         }
         setupDynamicGallery(photographyPhotos);
       }else if (["illustration", "crazy8", "unleashedlove", "heartofthejungle", "arcards", "acedemo", "goswim"].includes(currentPage)) {
