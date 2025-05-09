@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rory Chen Portfolio</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('/Images/photography/7.jpg') no-repeat center center / cover;
+      filter: blur(5px);
+      z-index: -2;
+    }
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, #f4f6f9 0%, #f4f6f9 25%, rgba(255, 255, 255, 0) 100%);
+      z-index: -1;
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+  <div class="sticky top-0 z-50 py-6 pb-2" id="navbar"></div>
+
+  <!-- About Section -->
+  <section class="max-w-5xl mx-auto mt-26 py-20">
+    <div class="flex items-center py-20">
+      <div class="w-1/3 lg:pr-4 pr-4">
+        <img src="/Images/Portrait/1.jpg" alt="Portrait" class="rounded-lg shadow-lg w-full h-auto object-cover" />
+      </div>
+      <div class="px-4 w-2/3 text-justify lg:pl-4 pl-4">
+        <h2 class="text-3xl font-semibold mb-10">About</h2>
+        <p class="text-lg mb-2">Hi, I'm Rory Chen! I'm a software engineer and indie game developer. I have a Msc in Information and Communication Technology and a Bsc in Software Engineering.</p>
+        <p class="text-lg mb-2">I mainly use C# and Unity for game development, but I also have knowledge of some other programming languages and game engines. I'm always willing to learn and usually pick up new skills quickly.</p>
+        <p class="text-lg mb-2">I draw inspirations from reality and my personal experiences, and I am good at transforming them into unique game ideas. To bring these ideas to life, I self-taught digital painting and 3D modelling In my spare time. I love using game development and art to express my emotions, values, and ways of thinking.</p>
+        <p class="text-lg mb-4">Currently, I'm looking for work as a game developer or technical artist. Feel free to reach out if you like my work!</p>
+        <p class="text-base">Email: <a href="mailto:rorychen168@gmail.com" class="text-gray-600 hover:text-blue-500">rorychen168@gmail.com</p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer class="absolute bottom-0 left-0 w-full py-2 text-center">
+      <div class="max-w-7xl mx-auto w-full">
+          <p class="text-sm text-gray-500">© 2025 Rory Chen, All Rights Reserved</p>
+      </div>
+  </footer>
+
+
+  <script src="/script.js"></script>
+</body>
+</html>

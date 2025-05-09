@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rory Chen Portfolio</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('/Images/Portfolio/GoSwim/bg.jpg') no-repeat center center / cover;
+      filter: blur(0px);
+      z-index: -2;
+    }
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, #f4f6f9 0%, #f4f6f9 20%, rgba(255, 255, 255, 0) 100%);
+      z-index: -1;
+    }
+    .hover-teal:hover {
+        background-color: #84ebd8;
+    }
+    .hover-blue:hover {
+        background-color: #41C1F0;
+    }
+    .bg-cyan{
+      background: linear-gradient(to bottom, #e1f5fd 0%, #e1f5fd 20%, #f4f6f9 100%);
+    }
+    .bubble-divider {
+      text-align: center;
+      font-size: 1.2rem;
+      letter-spacing: 0.15em;
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+  <div class="sticky top-0 z-50 py-6 pb-2" id="navbar"></div>
+
+  <div>
+    <nav class="max-w-5xl mx-auto text-gray-500 text-sm mb-4" aria-label="Breadcrumb">
+      <ol class="list-reset flex">
+        <li><span class="text-gray-700"> &gt;&nbsp; </span></li> 
+        <li><a href="/" class="hover:text-gray-700">Portfolio</a></li>
+        <li><span class="mx-2">/</span></li>
+        <li class="text-gray-700 font-semibold">GoSwim</li>
+      </ol>
+    </nav>
+
+    <main>
+      <section class="container max-w-5xl mx-auto pt-5 mb-12">
+        
+        <div class="flex flex-nowrap mt-8 mb-6">
+          <div class="w-full lg:w-2/3 lg:mb-0 text-lg pr-10">
+            <p class="mb-6 text-justify">
+              <strong>GoSwim</strong> is a third-person single-player casual game set in an increasingly crowded swimming pool. Players control a girl character to reach the finish line or to collect items while avoiding others. The pool is filled with different chracters with all kinds of annoying behaviors. To avoid collision, players can use skills to stun others or even kick them out of the pool. Enjoy the chaos and try to survive for as long as you can!
+            </p>
+          </div>
+
+          <div class="relative">
+            <div class="hidden lg:block absolute top-1/2 left-0 w-px bg-gray-300" style="height: 200px; transform: translateY(-50%);"></div>
+          </div>
+
+          <div class="w-full lg:w-1/3 lg:pl-10 pl-10"> 
+            <div class="mb-6 space-y-1 text-lg text-gray-600 leading-relaxed">
+              <p><strong>Type:</strong> Study Project</p>
+              <p><strong>Role:</strong> Solo Developer</p>
+              <p><strong>Tools/Technology:</strong> Unity, Blender, PS</p>
+              <p><strong>Genre:</strong> Casual/Simulator</p>
+              <p><strong>Time:</strong> July 2024 - Mar. 2025</p>
+              <p><strong>Development:</strong> 8 months</p>
+              <p><strong>Link:</strong> <a href="https://github.com/cherr66/Swim-Simulator" class="text-blue-600 hover:underline" target="_blank">GitHub</a></p>
+            </div> 
+
+          </div>          
+        </div>
+
+        <div class="relative mb-6 flex flex-nowrap -mt-10">
+          <div class="w-full lg:w-1/2 lg:mb-0 text-lg lg:pr-10 pr-10">
+            
+            <!-- 视频播放 -->
+            <div class="relative w-full mb-6" style="padding-top: 56.25%;">
+              <iframe class="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/MSfTwVUpz0c"
+                title="GoSwim - 1 Minutes Trailer" frameborder="0" 
+                style="border: none;"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  
+                frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div class="relative w-full mb-6" style="padding-top: 56.25%;">
+              <iframe class="absolute top-0 left-0 w-full h-full" 
+              src="https://www.youtube.com/embed/Dt51i5m4zH0" 
+              title="GoSwim - 5 Minutes Gameplay Clip" frameborder="0" 
+              style="border: none;"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+            </div>
+            
+             
+          </div>
+          <div class="w-full lg:w-1/2 lg:mb-0 text-lg lg:pl-10 pl-10">
+
+            <figure class="mt-36 mb-8 -ml-2">
+              <img src="/Images/Portfolio/GoSwim/swim ring.png" data-ignore="true" class="w-1/2">
+            </figure>
+
+            <div class="mb-4 px-2">
+              <h1 class="text-2xl font-extrabold mt-8">Overall Features</h1>
+              <ol class="mb-6 list-disc list-inside text-justify text-lg text-gray-700 leading-relaxed">
+                <li>2 game modes;</li>
+                <li>5 player actions and skills;</li>
+                <li>Hair and outfit customization for the player character;</li>
+                <li>Unique NPC behaviors controlled by a behavior tree;</li>
+                <li>Increasing difficulty over time;</li>
+                <li>Indoor and outdoor environments;</li>
+                <li>Localization system.</li>
+              </ol> 
+            </div>             
+
+          </div>
+        </div>
+
+      </section>
+
+      <section class="bg-cyan">
+
+        <img src="/Images/Portfolio/GoSwim/mosaic tiles.jpg" data-ignore="true" class="w-full">
+        
+        <div class="relative mt-28 mb-6 max-w-5xl mx-auto ">  
+          <h1 class="text-2xl font-extrabold mb-6">Development</h1>
+          <p class="mb-6 text-justify text-lg leading-relaxed">
+            Inspired by some awkward encounters last summer, I decided to create a pool-themed game. I've also always wanted to learn 3D modelling, so I saw this project as the perfect opportunity to start from scratch. The development process was both fun and rewarding. What made the project more meaningful was turning an unpleasant memory into a playable and shareable game.
+          </p>
+        </div>
+
+        <div class="relative max-w-5xl mx-auto ">  
+          <div class="flex flex-nowrap">
+            <div class="w-full lg:w-2/3 lg:mb-0 text-lg lg:pr-10 pr-10">
+              <div id="section1-preview" class="text-justify text-lg leading-relaxed">
+                I started by documenting the game design...
+              </div>
+              <div class="section1-full hidden">
+                <p class="mb-6 text-justify text-lg leading-relaxed">
+                  I started by documenting the game design and learning the basics of Blender and 3D modeling. The first model I created was the pool scene. I built the core area entirely by myself, including the pool, nearby buildings, and all the furniture and objects within. To reduce workload, I used some premade assets in non-essential areas—for example, the outermost building blocks and a few small drink props. Starting with a relatively large scene helped me work more smoothly later when creating the indoor fitting room.
+                </p>
+                <p class="mb-6 text-justify text-lg leading-relaxed">
+                  After that, I moved on to character design and modeling. I chose a low-poly style, which not only simplified my work but also gave a cartoonish feel. My work included modeling, rigging, weight painting, UV unwrapping, texture painting, and animation for all characters.
+                </p>
+                <p class="text-justify text-lg leading-relaxed">
+                  Once the primary assets were made, I shifted my focus to Unity and programming. I used flat shading for most items in the scene to enhance the cartoonish feel. Besides, I utilized full screen shader feature from Unity URP to apply an outline effect on the visuals. By combining both depth- and color-based edge detection, I made sure the outlines remained clean and didn’t overwhelm the visuals, especially in the background.
+                </p>
+              </div>
+              <button id="section1-toggle" class="text-base px-4 py-2 mt-4 bg-black text-white font-semibold rounded-lg shadow-md hover-blue transition-all duration-200">Load more</button>
+            </div>
+            <div class="w-full lg:w-1/3 lg:mb-0 text-lg section1-full hidden">
+              <figure class="mb-6">
+                <img src="/Images/Portfolio/GoSwim/Process/pool scene in blender.jpg" alt="Pool scene in blender" class="rounded-lg shadow-md mb-2">
+                <figcaption class="text-center text-gray-500 text-sm">Pool scene in blender</figcaption>
+              </figure>
+              <figure class="mb-6">
+                <img src="/Images/Portfolio/GoSwim/Process/animate character.jpg" alt="Animate character" class="rounded-lg shadow-md mb-2">
+                <figcaption class="text-center text-gray-500 text-sm">Animate character</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative pb-4 max-w-5xl mx-auto mt-16 mb-20">
+          <div class="bubble-divider">✧･ﾟ: *｡.｡･ﾟ✧*:･ﾟ｡.｡:*✧･ﾟ: *</div>
+        </div>
+
+        <div class="relative pb-28 max-w-5xl mx-auto">  
+          <h1 class="text-2xl font-extrabold mb-6">Interesting Problems</h1>
+          <div id="section2-preview" class="text-lg text-gray-700 leading-relaxed text-justify mt-12">
+            During the development process, I encountered some interesting problems...
+          </div>
+
+          <p class="text-lg text-gray-700 section2-full hidden">
+            During the development process, I encountered some interesting problems. Below are some of the issues and their solutions.
+          </p>
+
+          <div class="text-lg text-gray-700 leading-relaxed text-justify mt-12 section2-full hidden">
+            <h2 class="text-xl font-bold mb-4">Material Mask for Decorative NPCs</h2>
+            <figure class="w-1/3  float-right px-8 py-4">
+              <img src="/Images/Portfolio/GoSwim/Process/material mask.png" alt="A material mask separating bikini from body part" class="rounded-lg shadow-md mb-2">
+              <figcaption class="text-center text-gray-500 text-sm">A material mask separating bikini from body part</figcaption>
+            </figure>
+            <p class="mb-4 w-2/3 ">
+              To make the scene look natural and vivid, I decided to place some active characters in areas where players cannot reach. These non-interactable NPCs are called decorative NPCs in this project. I want them to look diverse, but modeling each one individually would have been a massive workload. My eventual solution was to personalize them by varying body types, hairstyles, hair colors, skin tones, clothing styles, and clothing colors.
+            </p>
+            <p class="mb-4 w-2/3 ">
+              For body type variation, I first modeled one base body, then modified its mesh and armature to create four additional types—resulting in five total body meshes representing women, men, children, elderly, and pregnant characters. In Unity, all these models share the same avatar to allow animation reuse. I also made several different hair meshes. Each body mesh and hair mesh were exported separately, and individual materials were used in Unity to control their color respectively.
+            </p>
+            <p>
+              As for skin tone and clothing customization, instead of painting clothes and skin on a single texture for the final material, I created several material masks. These masks separate the skin from clothing areas on the body mesh, allowing me to control skin and clothing colors respectively through scripting when instantiating material instances. This method significantly reduced my workload.
+            </p>
+          </div>
+
+          <div class="w-2/3 text-lg text-gray-700 leading-relaxed text-justify mt-12 section2-full hidden">
+            <h2 class="text-xl font-bold mb-4">Player Skill Adjustment</h2>
+            <p class="mb-4">
+              In the current version, the player’s splash skill affects a rectangular area in front of the character, which aligns with real-life experience. Based on that, I first completed the skill particle effects and then the code.
+            </p>
+            <p class="mb-4">
+              However, during playtesting, I found that this skill seems a bit underused and ineffective especially when the pool becomes crowded as difficulty raises, because enemies are very likely to pile up around players and touch players from side and back.
+            </p>
+            <p>
+              To improve this issue, a possible future adjustment is to add a skill upgrade feature — expanding the area of effect from a limited rectangle to a larger circular area centered on the player, along with new animations and skill effects.
+            </p>
+          </div>
+          <button id="section2-toggle" class="text-base px-4 py-2 mt-4 bg-black text-white font-semibold rounded-lg shadow-md hover-blue transition-all duration-200">Load more</button>
+        </div>
+      </section>
+
+
+      <div class="bg-white pt-36 pb-24 mx-auto relative">
+        <canvas id="particles"></canvas>
+
+          <!-- 图片轮播 -->
+          <div class="relative w-full max-w-5xl mx-auto shadow-lg" x-data="{ current: 0, images: ['/Images/Portfolio/GoSwim/screenshot1.png', '/Images/Portfolio/GoSwim/screenshot2.png', '/Images/Portfolio/GoSwim/screenshot3.png', '/Images/Portfolio/GoSwim/screenshot4.png', '/Images/Portfolio/GoSwim/screenshot5.png'] }">
+            <div class="overflow-hidden">
+              <template x-for="(image, index) in images" :key="index">
+                <img :src="image" x-show="current === index" class="w-full transition-all duration-500">
+              </template>
+            </div>
+
+            <button @click="current = (current === 0) ? images.length - 1 : current - 1"
+              class="absolute top-1/2 left-2 transform -translate-y-1/2 rounded-full p-3 bg-transparent hover:bg-white hover:shadow transition duration-300">
+              <i class="fas fa-chevron-left text-white hover:text-black transition"></i>
+            </button>
+
+            <button @click="current = (current === images.length - 1) ? 0 : current + 1"
+              class="absolute top-1/2 right-2 transform -translate-y-1/2 rounded-full p-3 bg-transparent hover:bg-white hover:shadow transition duration-300">
+              <i class="fas fa-chevron-right text-white hover:text-black transition"></i>
+            </button>
+
+            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+              <template x-for="(image, index) in images" :key="index">
+                <button @click="current = index"
+                  :class="{'bg-white': current === index, 'bg-gray-400': current !== index}"
+                  class="w-2 h-2 rounded-full transition-all duration-300"></button>
+              </template>
+            </div>
+          </div>
+        
+        <div class="flex justify-center mt-16 z-50">
+          <a href="https://rottencarambola.itch.io/goswim" target="_blank"
+             class="px-8 py-4 bg-black text-white text-2xl font-semibold rounded-lg shadow transition hover-teal">
+            Play on Web
+          </a>
+        </div>
+
+        <!-- Footer -->
+        <footer class="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-center max-w-7xl mx-auto w-full pb-2">
+          <div class="max-w-7xl mx-auto w-full">
+            <p class="text-sm text-gray-500">© 2025 Rory Chen, All Rights Reserved</p>
+          </div>
+        </footer>
+      </div>
+      
+      <!-- Lightbox 放大用 -->
+      <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden z-50">
+        <img id="lightbox-img" class="max-h-full shadow-lg" />
+      </div>
+    </main>
+  </div> 
+
+  <!-- Back to top button -->
+  <button id="backToTop" title="Back to Top" class="fixed bottom-8 right-8 bg-white border-2 border-gray-200 w-12 h-12 rounded-full hidden flex items-center justify-center transition-all duration-300 hover:shadow-lg hover:border-gray-500">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>       
+
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <script src="/script.js"></script>
+  <script src="/particles.js"></script>
+  <script>
+    function toggleContent(section) {
+      const fullContents = document.querySelectorAll(`.${section}-full`);
+      const previewContent = document.getElementById(`${section}-preview`);
+      const toggleButton = document.getElementById(`${section}-toggle`);
+      console.log(fullContents[0]);
+      const isHidden = fullContents[0].classList.contains('hidden');
+      
+      fullContents.forEach(element => {
+        if (isHidden) {
+          element.classList.remove('hidden');
+        } else {
+          element.classList.add('hidden');
+        }
+      });
+      
+      previewContent.classList.toggle('hidden');
+      toggleButton.textContent = isHidden ? 'Load less' : 'Load more';
+    }
+  
+    document.getElementById('section1-toggle').addEventListener('click', () => toggleContent('section1'));
+    document.getElementById('section2-toggle').addEventListener('click', () => toggleContent('section2'));
+  </script>
+  
+</body>
+</html>

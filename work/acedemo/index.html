@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rory Chen Portfolio</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    #particles {
+      position: fixed;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+  <div class="sticky top-0 z-50 py-6 pb-2" id="navbar"></div>
+
+  <div>
+    <nav class="max-w-5xl mx-auto text-gray-500 text-sm mb-4" aria-label="Breadcrumb">
+      <ol class="list-reset flex">
+        <li><span class="text-gray-700"> &gt;&nbsp; </span></li> 
+        <li><a href="/" class="hover:text-gray-700">Portfolio</a></li>
+        <li><span class="mx-2">/</span></li>
+        <li class="text-gray-700 font-semibold">ACE (demo)</li>
+      </ol>
+    </nav>
+
+    <main>
+      <canvas id="particles"></canvas>
+
+      <section class="container max-w-5xl mx-auto pt-5 mb-20">
+
+        <div class="flex flex-nowrap mt-8 mb-6">
+          <div class="w-full lg:w-2/3 lg:mb-0 text-lg pr-10 panelMask">
+            <p class="mb-6 text-justify">
+              People with visual impairments encounter barriers when dealing with digital games, as the majority of them heavily rely on graphics and visual content. Although commercial games nowadays include accessible options, a universal assistive tool for a wide range of digital games is still lacking.
+            </p>
+            <p class="mb-6 text-justify">
+              As part of my thesis — <a href="https://www.utupub.fi/handle/10024/178160" class="italic text-blue-600 hover:underline" target="_blank">
+              Enhancing HTML5 Games Accessibility: An Exploration of Assistive Technology for People with Visual Impairments</a> — I developed a prototype Chrome add-on to explore the feasibility of a universal assistive tool for HTML5 games.
+            </p>
+          </div>
+
+          <div class="relative">
+            <div class="hidden lg:block absolute top-1/2 left-0 w-px bg-gray-300" style="height: 240px; transform: translateY(-50%);"></div>
+          </div>
+
+          <div class="w-full lg:w-1/3 pr-0 lg:pr-10 pl-10 panelMask"> 
+            <div class="mb-6 space-y-1 text-lg text-gray-600 leading-relaxed">
+              <p><strong>Type:</strong> Thesis Project</p>
+              <p><strong>Role:</strong> Solo Developer</p>
+              <p><strong>Technology:</strong> HTML, CSS, JS</p>
+              <p><strong>Time:</strong> Feb. 2024 - Mar. 2024</p>
+              <p><strong>Development:</strong> 2 months</p>
+              <p><strong>Link:</strong> <a href="https://github.com/cherr66/ACE-demo" class="text-blue-600 hover:underline" target="_blank">GitHub</a></p>
+            </div>            
+          </div>          
+        </div>
+
+        <div class="relative mb-6 panelMask">         
+          <h1 class="text-2xl font-extrabold mb-4">Features</h1>
+
+          <div class="flex flex-nowrap">
+            <div class="w-full lg:w-1/2 lg:mb-0 text-lg lg:pr-10 pr-10">
+              <ul class="mb-6 list-disc list-inside text-justify text-lg text-gray-700 leading-relaxed">
+                <li>Injects appropriate ARIA labels to improve screen reader support for better content identification;</li>
+                <li>Highlights clickable or interactive elements in HTML5 games to assist players with low vision;</li>
+                <li>Sonification – uses sound cues to guide players in finding interactive elements, based on two strategies: volume-based and tempo-based;</li>
+                <li>Narration – provides an alternative to screen readers for spoken content;</li>
+                <li>Font customization for better readability;</li>
+                <li>Cursor customization for improved visibility;</li>
+                <li>Magnifier tool for zooming in on small details.</li>
+              </ul>    
+            </div>
+            <div class="w-full lg:w-1/2 lg:mb-0 text-lg">
+              <figure class="mb-6">
+                <img src="/Images/Portfolio/ACE demo/user interface.jpg" alt="User Interface" class="rounded-lg shadow-md mb-2">
+                <figcaption class="text-center text-gray-500 text-sm">User Interface</figcaption>
+              </figure>
+            </div>
+          </div>
+          
+          <p class="mb-6 text-justify text-lg leading-relaxed">
+            Due to time constraints, the current version and features are limited to web games built upon vanilla HTML5. Further research is needed to adapt the tool for games using advanced graphics technology like WebGL.
+          </p>    
+        </div>
+        
+        <div class="flex flex-nowrap mt-12 mb-8">
+
+          <div class="w-full lg:w-1/2 lg:mb-0 text-lg lg:pr-4 pr-4">
+            <figure class="mb-6">
+              <img src="/Images/Portfolio/ACE demo/with game.jpg" alt="Use with a HTML5 Game" class="rounded-lg shadow-md mb-2">
+              <figcaption class="text-center text-gray-500 text-sm">Use with a HTML5 Game</figcaption>
+            </figure>
+          </div>
+          <div class="w-full lg:w-1/2 lg:mb-0 text-lg lg:pl-4 pl-4">
+            <figure class="mb-6">
+              <img src="/Images/Portfolio/ACE demo/highlight feature.jpg" alt="Highlight Feature" class="rounded-lg shadow-md mb-2">
+              <figcaption class="text-center text-gray-500 text-sm">Highlight Feature</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="flex justify-center mt-2 mb-32 z-50">
+          <a href="https://chromewebstore.google.com/detail/ace-demo/hjeimilonjjfpmiopchdhdedjfpgdabk?hl=en&authuser=1&pli=1" target="_blank"
+             class="px-12 py-4 bg-black hover:bg-blue-500 text-white text-2xl font-semibold rounded-lg shadow transition">
+            Install 
+          </a>
+        </div>
+
+      </section>
+
+      <!-- Footer -->
+      <footer class="py-2 text-center mt-auto">
+        <div class="max-w-7xl mx-auto w-full">
+          <p class="text-sm text-gray-500">© 2025 Rory Chen, All Rights Reserved</p>
+        </div>
+      </footer>
+
+
+      <!-- Lightbox 放大用 -->
+      <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden z-50">
+        <img id="lightbox-img" class="max-h-full shadow-lg" />
+      </div>
+    </main>
+  </div> 
+
+  <!-- Back to top button -->
+  <button id="backToTop" title="Back to Top" class="fixed bottom-8 right-8 bg-white border-2 border-gray-200 w-12 h-12 rounded-full hidden flex items-center justify-center transition-all duration-300 hover:shadow-lg hover:border-gray-500">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>       
+
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <script src="/script.js"></script>
+  <script src="/particles.js"></script>
+</body>
+</html>

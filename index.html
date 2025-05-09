@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rory Chen Portfolio</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('/Images/photography/16.jpg') no-repeat center center / cover;
+      filter: blur(4px);
+      z-index: -2;
+    }
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, #f4f6f9 0%, #f4f6f9 25%, rgba(255, 255, 255, 0) 100%);
+      z-index: -1;
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+  <div class="sticky top-0 z-50 py-6 pb-2" id="navbar"></div>
+
+
+  <!-- Home Section -->
+  <header class="mt-20 mb-12">
+    <div class="flex items-center justify-center">
+      <img src="https://img.icons8.com/ios/50/quote-left.png" alt="quote-left" class="w-6 h-6 mr-4 opacity-70">
+      <p class="mx-10 pt-6 leading-loose text-center text-gray-600">Hi there! I'm Rory Chen, a software engineer and indie game developer.<br>
+        Here are some of my projects.
+      </p>
+      <img src="https://img.icons8.com/ios/50/quote-right.png" alt="quote-right" class="w-6 h-6 ml-4 opacity-70">
+    </div>
+    <div class="flex flex-col items-center justify-center mt-4">
+      <span class="text-2xl text-gray-400">*･ﾟ</span>
+      <span class="text-2xl text-gray-400">✧</span>
+      <span class="text-2xl text-gray-400">: </span>
+    </div>
+  </header>
+  
+
+  <!-- Projects Section -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto py-8 mb-16">
+
+    <a href="/work/goswim/" class="relative overflow-hidden rounded-xl shadow-lg group transform transition-all duration-300" style="aspect-ratio: 4 / 3;">
+      <img src="/Images/Portfolio/GoSwim/thumnail.png" alt="GoSwim" class="absolute inset-0 w-full h-full object-cover" style="object-position: right;">
+      <div class="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+        <div class="relative z-10 text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3 class="text-3xl font-bold mb-1">GoSwim</h3>
+          <p class="text-base">3D Casual Game | Unity + Blender</p>
+        </div>
+      </div>
+    </a>
+  
+    <a href="/work/acedemo" class="relative overflow-hidden rounded-xl shadow-lg group transform transition-all duration-300" style="aspect-ratio: 4 / 3;">
+      <img src="/Images/Portfolio/ACE demo/thumnail.png" alt="ACE (demo)" class="absolute inset-0 w-full h-full object-cover bg-white">
+      <div class="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+        <div class="relative z-10 text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3 class="text-3xl font-bold mb-1">ACE (demo)</h3>
+          <p class="text-base">Chrome add-on | Html + CSS + JS</p>
+          <!-- <p class="text-base">Accessibility Tool for HTML5 Games</p>           -->
+        </div>
+      </div>
+    </a>
+
+    <a href="/work/cardosseum" class="relative overflow-hidden rounded-xl shadow-lg group transform transition-all duration-300" style="aspect-ratio: 4 / 3;">
+      <img src="/Images/Portfolio/Cardosseum/thumnail.jpg" alt="Cardosseum" class="absolute inset-0 w-full h-full object-cover">
+      <div class="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+        <div class="relative z-10 text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3 class="text-3xl font-bold mb-1">Cardosseum</h3>
+          <p class="text-base">2D Deckbuilder Game | Unity</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="/work/heartofthejungle" class="relative overflow-hidden rounded-xl shadow-lg group transform transition-all duration-300" style="aspect-ratio: 4 / 3;">
+      <img src="/Images/Portfolio/Heart of the Jungle/thumnail.jpg" alt="Heart of the Jungle" class="absolute inset-0 w-full h-full object-cover">
+      <div class="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+        <div class="relative z-10 text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3 class="text-3xl font-bold mb-1">Heart of the Jungle</h3>
+          <p class="text-base">2D Platformer | Unity</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="/work/arcards" class="relative overflow-hidden rounded-xl shadow-lg group transform transition-all duration-300" style="aspect-ratio: 4 / 3;">
+      <img src="/Images/Portfolio/AR Cards/1.jpg" alt="AR Cards" class="absolute inset-0 w-full h-full object-cover">
+      <div class="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+        <div class="relative z-10 text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3 class="text-3xl font-bold mb-1">AR Cards</h3>
+          <p class="text-base">Augmented Reality App | Unity + AR Core</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="/work/crazy8" class="relative overflow-hidden rounded-xl shadow-lg group transform transition-all duration-300" style="aspect-ratio: 4 / 3;">
+      <img src="/Images/Portfolio/Crazy8/1.jpg" alt="Crazy Eight" class="absolute inset-0 w-full h-full object-cover">
+      <div class="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+        <div class="relative z-10 text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3 class="text-3xl font-bold mb-1">Crazy Eight</h3>
+          <p class="text-base">2D Card Game | JavaFX + FXML + Scene Builder</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="/work/unleashedlove" class="relative overflow-hidden rounded-xl shadow-lg group transform transition-all duration-300" style="aspect-ratio: 4 / 3;">
+      <img src="/Images/Portfolio/Unleashed Love/1.jpg" alt="unleashedLove" class="absolute inset-0 w-full h-full object-cover" style="object-position: right;">
+      <div class="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+        <div class="relative z-10 text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3 class="text-3xl font-bold mb-1">Unleashed Love</h3>
+          <p class="text-base">Interactive Story | Ren’Py</p>
+        </div>
+      </div>
+    </a>
+
+  </div>
+
+  <footer class="py-2 text-center mt-auto">
+    <div class="max-w-7xl mx-auto w-full">
+      <p class="text-sm text-gray-500">© 2025 Rory Chen, All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+  <script>
+    // Improved smooth upward movement
+    const portfolioCards = document.querySelectorAll('.group');
+    portfolioCards.forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        card.style.transform = 'translateY(-8px)';
+        card.style.transition = 'transform 300ms cubic-bezier(0.25, 0.8, 0.25, 1)';
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'translateY(0)';
+        card.style.transition = 'transform 300ms cubic-bezier(0.25, 0.8, 0.25, 1)';
+      });
+    });
+  </script>
+</body>
+</html>

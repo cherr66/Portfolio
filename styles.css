@@ -1,0 +1,86 @@
+body {
+font-family: 'Segoe UI', sans-serif;
+background: linear-gradient(to bottom, #f4f6f9, #e6edf4);
+color: #1f2937;
+}
+
+#navbar {
+    background:#f4f6f9;
+    /* background: linear-gradient(
+        to bottom,
+        #4c85a9 0px,
+        #4c85a9 100px,
+        rgba(235, 247, 250, 0.2) 100%
+      ); */
+}
+  
+nav ul li a {
+background: #6c7481;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+nav ul li a:hover {
+background: #1f2937;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+nav ul li a.active {
+background: linear-gradient(180deg, #a7b1c0, #1f2937);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+nav ul li a.active::after {
+content: "";
+display: block;
+height: 2px;
+width: 100%;
+background: #686d74;
+border-radius: 9999px;
+}
+#projectsDropdown li a,
+#artsDropdown li a {
+font-family: 'Arial', sans-serif;
+font-size: 16px;
+font-weight: normal;
+color: #333;
+transition: background-color 0.3s ease;
+}
+
+.project-card {
+background: white;
+border-radius: 1rem;
+box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+transform: translateY(-4px);
+box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+.dropdown-hidden {
+opacity: 0;
+transform: translateY(10px);
+pointer-events: none;
+transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.dropdown-visible {
+opacity: 1;
+transform: translateY(0);
+pointer-events: auto;
+}
+
+#particles {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 0;
+pointer-events: none;
+}
+.panelMask {
+  background: radial-gradient(
+    #f4f6f9 60%,
+    rgba(0, 0, 0, 0) 70%,
+    rgba(0, 0, 0, 0) 100%
+  );   
+}

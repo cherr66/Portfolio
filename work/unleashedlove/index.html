@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rory Chen Portfolio</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('/Images/Portfolio/Unleashed Love/bg.png') no-repeat center center / cover;
+      filter: blur(1px);
+      z-index: -2;
+    }
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, #f4f6f9 0%, #f4f6f9 20%, rgba(255, 255, 255, 0) 100%);
+      z-index: -1;
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+  <div class="sticky top-0 z-50 py-6 pb-2" id="navbar"></div>
+
+  <div>
+    <nav class="max-w-5xl mx-auto text-gray-500 text-sm mb-4" aria-label="Breadcrumb">
+      <ol class="list-reset flex">
+        <li><span class="text-gray-700"> &gt;&nbsp; </span></li> 
+        <li><a href="/" class="hover:text-gray-700">Portfolio</a></li>
+        <li><span class="mx-2">/</span></li>
+        <li class="text-gray-700 font-semibold">Unleashed Love</li>
+      </ol>
+    </nav>
+
+    <main>
+      
+      <section class="container max-w-5xl mx-auto pt-5 mb-20">
+        <!-- <h2 class="text-3xl font-serif mb-4 text-center">Unleashed Love</h2> -->
+
+        <!-- 文本 -->
+        <div class="flex flex-nowrap mt-8 mb-10">
+          <div class="w-full lg:w-2/3 lg:mb-0 text-lg mr-10 py-2 panelMask">
+            <p class="mb-4 text-justify">
+              <strong>Unleashed Love</strong> is a second-person narrative game where player plays as a pet dog owned by a young couple, Daniel and Alex. Their relationship seems to be falling apart, and through making choices, players can explore each character’s perspective and influence how the story unfolds.
+            </p>
+            <p class="mb-4 text-justify">
+              The story begins on a Friday night over dinner, as the couple gets into an argument over trifle things. After the meal, players can choose whether to follow Daniel on a walk or stay home with Alex.
+            </p>
+            <p class="mb-2 text-justify">
+              The game features three key choices and three unique endings—each choice leading to a different ending. Within a fully branching story world, players can experience full agency over a story about love, choices, and trust.
+            </p>
+          </div>
+        
+          <div class="relative">
+            <div class="hidden lg:block absolute top-1/2 left-0 w-px bg-gray-400" style="height: 300px; transform: translateY(-50%);"></div>
+          </div>
+                  
+          <div class="w-full lg:w-1/3 pr-0 lg:pr-10 pl-10 ">
+            <div class="mb-6 space-y-1 text-lg text-gray-600 leading-relaxed py-2 panelMask ">
+              <p><strong>Type:</strong> School Project</p>
+              <p><strong>Role:</strong> Solo developer</p>
+              <p><strong>Tools/Technology:</strong> Ren’Py</p>
+              <p><strong>Genre:</strong> <span class="text-sm">Narrative / Visual Novel</span></p>
+              <p><strong>Time:</strong> Aug. 2023</p>
+              <p><strong>Development:</strong> 3 days</p>
+            </div>
+          </div>
+        </div>        
+
+
+        <!-- 图片轮播 -->
+        <div class="relative w-full max-w-2xl mx-auto mb-8 mt-6 shadow-lg" x-data="{ current: 0, images: ['/Images/Portfolio/Unleashed Love/1.jpg', '/Images/Portfolio/Unleashed Love/2.jpg', '/Images/Portfolio/Unleashed Love/3.jpg', '/Images/Portfolio/Unleashed Love/4.jpg', '/Images/Portfolio/Unleashed Love/5.jpg'] }">
+          <div class="overflow-hidden">
+            <template x-for="(image, index) in images" :key="index">
+              <img :src="image" x-show="current === index" class="w-full transition-all duration-500">
+            </template>
+          </div>
+    
+          <button @click="current = (current === 0) ? images.length - 1 : current - 1"
+            class="absolute top-1/2 left-2 transform -translate-y-1/2 rounded-full p-3 bg-transparent hover:bg-white hover:shadow transition duration-300">
+            <i class="fas fa-chevron-left text-white hover:text-black transition"></i>
+          </button>
+    
+          <button @click="current = (current === images.length - 1) ? 0 : current + 1"
+            class="absolute top-1/2 right-2 transform -translate-y-1/2 rounded-full p-3 bg-transparent hover:bg-white hover:shadow transition duration-300">
+            <i class="fas fa-chevron-right text-white hover:text-black transition"></i>
+          </button>
+    
+          <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+            <template x-for="(image, index) in images" :key="index">
+              <button @click="current = index"
+                :class="{'bg-white': current === index, 'bg-gray-400': current !== index}"
+                class="w-2 h-2 rounded-full transition-all duration-300"></button>
+            </template>
+          </div>
+        </div>
+      </section>
+
+      <!-- 视频播放 -->
+      <div class="bg-white pt-36 pb-48 mt-12 mx-auto relative">
+        <canvas id="particles"></canvas>
+        <div class="relative w-full max-w-5xl mx-auto" style="height: 576px; overflow: hidden;">
+          <iframe class="absolute top-0 left-0 w-full h-full" 
+            src="https://www.youtube.com/embed/HVjnFko3YJA" 
+            title="Unleashed Love - Gameplay Clip" frameborder="0" 
+            style="border: none;"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div> 
+              
+        <!-- Footer -->
+        <footer class="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-center max-w-7xl mx-auto w-full pb-2">
+          <div class="max-w-7xl mx-auto w-full">
+            <p class="text-sm text-gray-500">© 2025 Rory Chen, All Rights Reserved</p>
+          </div>
+        </footer>
+      </div>
+
+      <!-- Lightbox 放大用 -->
+      <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden z-50">
+        <img id="lightbox-img" class="max-h-full shadow-lg" />
+      </div>
+    </main>
+  </div> 
+
+
+
+  <!-- Back to top button -->
+  <button id="backToTop" title="Back to Top" class="fixed bottom-8 right-8 bg-white border-2 border-gray-200 w-12 h-12 rounded-full hidden flex items-center justify-center transition-all duration-300 hover:shadow-lg hover:border-gray-500">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>       
+
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <script src="/script.js"></script>
+  <script src="/particles.js"></script>
+</body>
+</html>
