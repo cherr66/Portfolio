@@ -71,11 +71,12 @@ function updateURLs(){
 
 function setNavigationBarActive(){
   const pathParts = window.location.pathname.split('/').filter(Boolean);
-  if(pathParts.length <= 0) {
+  const currentPage = pathParts[pathParts.length - 1]?.toLowerCase() || '';
+  if(pathParts.length <= 0 || (isGithubHost && currentPage === repositoryName)) {
     document.getElementById('home').classList.add('active');
     return;
   }
-  const currentPage = pathParts[pathParts.length - 1].toLowerCase();
+  
   console.log(currentPage);
 
   const pageToMenuMap = {
@@ -104,7 +105,7 @@ function setNavigationBarActive(){
           linkHref = linkHref.replace(window.location.origin + '/' + repositoryName, '');
         }
         linkHref = linkHref.substring(1);
-                console.log(linkHref);
+        console.log(linkHref);
         console.log("----");
 
         if (linkHref === currentPage) {
