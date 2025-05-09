@@ -1,13 +1,10 @@
-const isGithub = window.location.origin.includes('github.io');
+const isGithubHost = window.location.origin.includes('github.io');
 const repositoryName = window.location.pathname.split('/').filter(Boolean)[0];
 
 // updateURLs();
 
 window.addEventListener('DOMContentLoaded', () => {
-  console.log(isGithub);
-  console.log(repositoryName);
-  const navbarUrl = (isGithub ? window.location.origin + '/' + repositoryName : '') + '/navbar.html?' + new Date().getTime();
-  console.log(navbarUrl);
+  const navbarUrl = (isGithubHost ? window.location.origin + '/' + repositoryName : '') + '/navbar.html?' + new Date().getTime();
 
   fetch(navbarUrl)
     .then(response => response.text())
@@ -23,7 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
       if(pathParts.length <= 0) return;
       const currentPage = pathParts[pathParts.length - 1].toLowerCase();
       if (currentPage === "photography") {
-        if(isGithub){
+        if(isGithubHost){
           photographyPhotos.forEach((element, index, array) => {
             array[index] = element.replace('/Images', `/${repositoryName}/Images`);
           });
@@ -44,7 +41,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 function updateURLs(){
-  if (isGithub) {
+  if (isGithubHost) {
     const basePath = window.location.origin + '/' + repositoryName;
 
     document.querySelectorAll('img, link[rel="stylesheet"], link[rel="icon"], a').forEach(el => {
@@ -52,7 +49,7 @@ function updateURLs(){
       
       const pattern = new RegExp(`^${window.location.origin}/(?!${repositoryName}/)`);
       if (url && pattern.test(url)) {
-          console.log("before " + url);
+          // console.log("before " + url);
           const fixedUrl = basePath + url.replace(window.location.origin, '');
           if (el.src) {
               el.src = fixedUrl;
@@ -60,7 +57,7 @@ function updateURLs(){
               el.href = fixedUrl;
           }
           url = el.src || el.href;
-          console.log("after " + url);
+          // console.log("after " + url);
         }
     });
 
@@ -68,7 +65,6 @@ function updateURLs(){
         styleEl.textContent = styleEl.textContent.replace(/url\(["']?\/(.*?)["']?\)/g, (match, path) => {
           return `url(/${repositoryName}/${path})`;
         });
-        console.log(styleEl.textContent);
     });
   }
 }
@@ -102,7 +98,12 @@ function setNavigationBarActive(){
 
   if (!matched) {
       navLinks.forEach(link => {
+        
+      console.log(link.getAttribute('href'));
       const linkHref = link.getAttribute('href').substring(1);
+      console.log(linkHref);
+      console.log("----");
+
       if (linkHref === currentPage) {
           link.classList.add('active');
         }
