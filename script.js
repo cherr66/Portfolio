@@ -1,8 +1,6 @@
 const isGithub = window.location.origin.includes('github.io');
 const repositoryName = window.location.pathname.split('/').filter(Boolean)[0];
 
-// updateURLs();
-
 window.addEventListener('DOMContentLoaded', () => {
   console.log(isGithub);
   console.log(repositoryName);
