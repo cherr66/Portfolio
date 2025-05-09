@@ -59,40 +59,17 @@ function updateURLs(){
           } else if (el.href) {
               el.href = fixedUrl;
           }
+          url = el.src || el.href;
           console.log("after " + url);
         }
     });
 
-
-
-
-
-    // document.querySelectorAll('img, link, script').forEach(el => {
-    //     let url;
-    //     if (el.tagName === 'IMG' && el.src) {
-    //         url = el.src;
-    //     }
-    //     else if (el.tagName === 'LINK' && el.href) {
-    //         url = el.href;
-    //     }
-    //     else if (el.tagName === 'SCRIPT' && el.src) {
-    //         url = el.src;
-    //     }
-    //     console.log(el);
-    //     console.log("before " + url);
-
-    //     if (url && url.startsWith('/')) {
-    //         if (el.tagName === 'IMG') {
-    //             el.src = basePath + url;
-    //         } else if (el.tagName === 'LINK') {
-    //             el.href = basePath + url;
-    //         } else if (el.tagName === 'SCRIPT') {
-    //             el.src = basePath + url;
-    //         }
-    //         console.log("after " + url);
-    //     }
-    // });
-}
+    document.querySelectorAll('style').forEach(styleEl => {
+        styleEl.textContent = styleEl.textContent.replace(/url\(["']?\/(.*?)["']?\)/g, (match, path) => {
+            return `url(${basePath}/${path})`;
+        });
+    });
+  }
 }
 
 function setNavigationBarActive(){
