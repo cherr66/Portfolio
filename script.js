@@ -1,6 +1,12 @@
 const isGithub = window.location.origin.includes('github.io');
 const repositoryName = window.location.pathname.split('/').filter(Boolean)[0];
 
+if (isGithub) {
+    const base = document.createElement('base');
+    base.href = `/${repositoryName}/`;
+    document.head.prepend(base);
+}
+
 window.addEventListener('DOMContentLoaded', () => {
   console.log(isGithub);
   console.log(repositoryName);
@@ -12,7 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
     .then(html => {
       document.getElementById('navbar').innerHTML = html;
     })
-    .then(updateURLs)
+    // .then(updateURLs)
     .then(setNavigationBarActive)
     .then(setUpNavigationBarDropDown)
     .then(setUpBackToTopBtn)
