@@ -47,7 +47,7 @@ function updateURLs(){
   if (isGithub) {
     const basePath = window.location.origin + '/' + repositoryName;
 
-    document.querySelectorAll('img, link[rel="stylesheet"], a').forEach(el => {
+    document.querySelectorAll('img, link[rel="stylesheet"], link[rel="icon"], a').forEach(el => {
       let url = el.src || el.href;
       
       const pattern = new RegExp(`^${window.location.origin}/(?!${repositoryName}/)`);
