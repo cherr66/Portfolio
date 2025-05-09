@@ -49,7 +49,6 @@ function updateURLs(){
 
     document.querySelectorAll('img, link, script').forEach(el => {
         let url;
-        console.log("before " + url);
         if (el.tagName === 'IMG' && el.src) {
             url = el.src;
         }
@@ -59,6 +58,8 @@ function updateURLs(){
         else if (el.tagName === 'SCRIPT' && el.src) {
             url = el.src;
         }
+        console.log(el);
+        console.log("before " + url);
 
         if (url && url.startsWith('/')) {
             if (el.tagName === 'IMG') {
@@ -68,9 +69,8 @@ function updateURLs(){
             } else if (el.tagName === 'SCRIPT') {
                 el.src = basePath + url;
             }
+            console.log("after " + url);
         }
-        console.log("after " + url);
-
     });
 }
 }
