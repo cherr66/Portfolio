@@ -1,11 +1,7 @@
 const isGithub = window.location.origin.includes('github.io');
 const repositoryName = window.location.pathname.split('/').filter(Boolean)[0];
 
-if (isGithub) {
-    const base = document.createElement('base');
-    base.href = `/${repositoryName}/`;
-    document.head.prepend(base);
-}
+updateURLs();
 
 window.addEventListener('DOMContentLoaded', () => {
   console.log(isGithub);
@@ -53,6 +49,7 @@ function updateURLs(){
 
     document.querySelectorAll('img, link, script').forEach(el => {
         let url;
+        console.log("before " + url);
         if (el.tagName === 'IMG' && el.src) {
             url = el.src;
         }
@@ -72,6 +69,8 @@ function updateURLs(){
                 el.src = basePath + url;
             }
         }
+        console.log("after " + url);
+
     });
 }
 }
