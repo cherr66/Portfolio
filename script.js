@@ -47,31 +47,51 @@ function updateURLs(){
   if (isGithub) {
     const basePath = window.location.origin + '/' + repositoryName;
 
-    document.querySelectorAll('img, link, script').forEach(el => {
-        let url;
-        if (el.tagName === 'IMG' && el.src) {
-            url = el.src;
-        }
-        else if (el.tagName === 'LINK' && el.href) {
-            url = el.href;
-        }
-        else if (el.tagName === 'SCRIPT' && el.src) {
-            url = el.src;
-        }
-        console.log(el);
-        console.log("before " + url);
-
-        if (url && url.startsWith('/')) {
-            if (el.tagName === 'IMG') {
-                el.src = basePath + url;
-            } else if (el.tagName === 'LINK') {
-                el.href = basePath + url;
-            } else if (el.tagName === 'SCRIPT') {
-                el.src = basePath + url;
-            }
-            console.log("after " + url);
+    document.querySelectorAll('img, link[rel="stylesheet"]').forEach(el => {
+      let url = el.src || el.href;
+      
+      const pattern = new RegExp(`^${window.location.origin}/(?!${repositoryName}/)`);
+      if (url && pattern.test(url)) {
+          console.log("before " + url);
+          const fixedUrl = basePath + url.replace(window.location.origin, '');
+          if (el.src) {
+              el.src = fixedUrl;
+          } else if (el.href) {
+              el.href = fixedUrl;
+          }
+          console.log("after " + url);
         }
     });
+
+
+
+
+
+    // document.querySelectorAll('img, link, script').forEach(el => {
+    //     let url;
+    //     if (el.tagName === 'IMG' && el.src) {
+    //         url = el.src;
+    //     }
+    //     else if (el.tagName === 'LINK' && el.href) {
+    //         url = el.href;
+    //     }
+    //     else if (el.tagName === 'SCRIPT' && el.src) {
+    //         url = el.src;
+    //     }
+    //     console.log(el);
+    //     console.log("before " + url);
+
+    //     if (url && url.startsWith('/')) {
+    //         if (el.tagName === 'IMG') {
+    //             el.src = basePath + url;
+    //         } else if (el.tagName === 'LINK') {
+    //             el.href = basePath + url;
+    //         } else if (el.tagName === 'SCRIPT') {
+    //             el.src = basePath + url;
+    //         }
+    //         console.log("after " + url);
+    //     }
+    // });
 }
 }
 
