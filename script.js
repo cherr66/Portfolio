@@ -1,7 +1,7 @@
 const isGithub = window.location.origin.includes('github.io');
 const repositoryName = window.location.pathname.split('/').filter(Boolean)[0];
 
-updateURLs();
+// updateURLs();
 
 window.addEventListener('DOMContentLoaded', () => {
   console.log(isGithub);
@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
     .then(html => {
       document.getElementById('navbar').innerHTML = html;
     })
-    // .then(updateURLs)
+    .then(updateURLs)
     .then(setNavigationBarActive)
     .then(setUpNavigationBarDropDown)
     .then(setUpBackToTopBtn)
