@@ -88,25 +88,28 @@ function setNavigationBarActive(){
   const navLinks = document.querySelectorAll('#navbar nav ul li a');
   let matched = false;
   if (pageToMenuMap[currentPage]) {
-      const parentMenuId = pageToMenuMap[currentPage];
-      const parentMenu = document.getElementById(parentMenuId)?.querySelector('a');
-      if (parentMenu) {
+    const parentMenuId = pageToMenuMap[currentPage];
+    const parentMenu = document.getElementById(parentMenuId)?.querySelector('a');
+    if (parentMenu) {
       parentMenu.classList.add('active');
       matched = true;
-      }
     }
+  }
 
   if (!matched) {
       navLinks.forEach(link => {
-        
-      console.log(link.getAttribute('href'));
-      const linkHref = link.getAttribute('href').substring(1);
-      console.log(linkHref);
-      console.log("----");
-
-      if (linkHref === currentPage) {
-          link.classList.add('active');
+        let linkHref = link.getAttribute('href');
+        console.log(linkHref);
+        if(isGithubHost){
+          linkHref = linkHref.replace(window.location.origin + '/' + repositoryName, '');
         }
+        linkHref = linkHref.substring(1);
+                console.log(linkHref);
+        console.log("----");
+
+        if (linkHref === currentPage) {
+            link.classList.add('active');
+          }
       });
   }
 }
