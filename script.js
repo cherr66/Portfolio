@@ -27,7 +27,6 @@ window.addEventListener('DOMContentLoaded', () => {
           photographyPhotos.forEach((element, index, array) => {
             array[index] = element.replace('/Images', `/${repositoryName}/Images`);
           });
-          console.log(photographyPhotos);
         }
         setupDynamicGallery(photographyPhotos);
       }else if (["illustration", "crazy8", "unleashedlove", "heartofthejungle", "arcards", "acedemo", "goswim"].includes(currentPage)) {
