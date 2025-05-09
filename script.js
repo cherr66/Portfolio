@@ -66,8 +66,9 @@ function updateURLs(){
 
     document.querySelectorAll('style').forEach(styleEl => {
         styleEl.textContent = styleEl.textContent.replace(/url\(["']?\/(.*?)["']?\)/g, (match, path) => {
-            return `url(${repositoryName}/${path})`;
+          return `url(/${repositoryName}/${path})`;
         });
+        console.log(styleEl.textContent);
     });
   }
 }
