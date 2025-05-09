@@ -76,8 +76,6 @@ function setNavigationBarActive(){
     document.getElementById('home').classList.add('active');
     return;
   }
-  
-  console.log(currentPage);
 
   const pageToMenuMap = {
       // 'game.html': 'projectsMenu',
@@ -100,13 +98,11 @@ function setNavigationBarActive(){
   if (!matched) {
       navLinks.forEach(link => {
         let linkHref = link.getAttribute('href');
-        console.log(linkHref);
+
         if(isGithubHost){
           linkHref = linkHref.replace(window.location.origin + '/' + repositoryName, '');
         }
         linkHref = linkHref.substring(1);
-        console.log(linkHref);
-        console.log("----");
 
         if (linkHref === currentPage) {
             link.classList.add('active');
