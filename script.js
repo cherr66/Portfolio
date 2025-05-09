@@ -43,7 +43,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 function updateURLs(){
   if (isGithub) {
-    const basePath = window.location.origin + '/' + repoNameMatch;
+    const basePath = window.location.origin + '/' + repositoryName;
 
     document.querySelectorAll('img, link, script').forEach(el => {
         let url;
